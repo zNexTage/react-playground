@@ -10,14 +10,14 @@ const useTranslation = (language = "") => {
      * Ensures that the name of the language is the same as the name of the translation modules;
      * @param {*} lang 
      */
-    const normalizeLang = lang => lang.replace("-", "").toLowerCase();
+    const normalizeLang = lang => lang.replace("-", "_").toLowerCase();
 
     const [currentLanguage, setCurrentLanguage] = useState(normalizeLang(lang));
     
     /**
      * Find the translation json in translations directory and uses the key to get the translated string
-     * @param {string} key 
-     * @returns 
+     * @param {string} key -> Key is used to search the translated in translation json. Don't forget to add the key in your translation json  
+     * @returns The translated value
      */
     const translate = key => {
         const translationDict = translation[currentLanguage];
