@@ -15,6 +15,7 @@ const TranslationExample = () => {
             <button onClick={() => changeLanguage("pt-br")}>pt-br</button>
             <button onClick={() => changeLanguage("en-us")}>en-us</button>
             <button onClick={() => changeLanguage("fr")}>fr</button>
+            <button onClick={() => changeLanguage("de")}>de</button>
         </section>
     )
 }
