@@ -27,7 +27,7 @@ const useTranslation = (language = "", fallbackLang = "en-us") => {
 
         if(!translationDict) return key;
 
-        return translationDict[key];
+        return translationDict[key] || key;
     }
 
     /**
@@ -48,7 +48,8 @@ const useTranslation = (language = "", fallbackLang = "en-us") => {
         currentLanguage,
         changeLanguage,
         changeFallbackLanguage,
-        translate
+        translate,
+        fallbackLanguage
     };
 }
 
